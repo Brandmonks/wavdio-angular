@@ -6,10 +6,22 @@
     "wAVdio": {
       "i18n": {
         "locales": {
-          "de": "src/i18n/messages.de.xlf",
-          "en": "src/i18n/messages.en.xlf",
-          "es": "src/i18n/messages.es.xlf",
-          "fr": "src/i18n/messages.fr.xlf"
+          "de": {
+            "translation": "src/i18n/messages.de.xlf",
+            "baseHref": ""
+          },
+          "en": {
+            "translation": "src/i18n/messages.en.xlf",
+            "baseHref": ""
+          },
+          "es": {
+            "translation": "src/i18n/messages.es.xlf",
+            "baseHref": ""
+          },
+          "fr": {
+            "translation": "src/i18n/messages.fr.xlf",
+            "baseHref": ""
+          }
         }
       },
       "root": "",
@@ -21,7 +33,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/wAVdio",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -46,11 +57,16 @@
               "node_modules/marked/lib/marked.js"
             ],
             "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            "ngswConfigPath": "ngsw-config.json",
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "de": {
-              "aot": true,
               "budgets": [
                 {
                   "type": "anyComponentStyle",
@@ -62,7 +78,6 @@
               "i18nLocale": "de"
             },
             "en": {
-              "aot": true,
               "budgets": [
                 {
                   "type": "anyComponentStyle",
@@ -74,7 +89,6 @@
               "i18nLocale": "en"
             },
             "es": {
-              "aot": true,
               "budgets": [
                 {
                   "type": "anyComponentStyle",
@@ -86,7 +100,6 @@
               "i18nLocale": "es"
             },
             "fr": {
-              "aot": true,
               "budgets": [
                 {
                   "type": "anyComponentStyle",
@@ -98,7 +111,6 @@
               "i18nLocale": "fr"
             },
             "prod-de": {
-              "aot": true,
               "outputPath": "dist/wAVdio-prod-de",
               "i18nFile": "src/i18n/messages.de.xlf",
               "i18nLocale": "de",
@@ -129,7 +141,6 @@
               ]
             },
             "prod-en": {
-              "aot": true,
               "outputPath": "dist/wAVdio-prod-en",
               "i18nFile": "src/i18n/messages.en.xlf",
               "i18nLocale": "en",
@@ -160,7 +171,6 @@
               ]
             },
             "prod-es": {
-              "aot": true,
               "outputPath": "dist/wAVdio-prod-es",
               "i18nFile": "src/i18n/messages.es.xlf",
               "i18nLocale": "es",
@@ -191,7 +201,6 @@
               ]
             },
             "prod-fr": {
-              "aot": true,
               "outputPath": "dist/wAVdio-prod-fr",
               "i18nFile": "src/i18n/messages.fr.xlf",
               "i18nLocale": "fr",
@@ -221,7 +230,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
