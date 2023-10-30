@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
 /*
  * Fix multi-line checkbox labels: https://github.com/angular/components/issues/8416
@@ -18,19 +18,19 @@
  * Material Theming: https://material.angular.io/guide/theming
  */
 
-@include mat-core();
+@include mat.core();
 
-$primary: mat-palette($mat-grey);
-$accent:  mat-palette($mat-blue-gray);
+$primary: mat.define-palette(mat.$grey-palette);
+$accent:  mat.define-palette(mat.$blue-gray-palette);
 
-$theme: mat-dark-theme($primary, $accent);
+$theme: mat.define-dark-theme($primary, $accent);
 
-@include angular-material-theme($theme);
+@include mat.all-component-themes($theme);
 
 /*
  *
  */
 
 a, a:hover {
-  color: mat-color($primary, lighter);
+  color: mat.get-color-from-palette($primary, lighter);
 }
