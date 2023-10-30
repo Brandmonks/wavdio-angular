@@ -74,8 +74,7 @@
                 }
               ],
               "outputPath": "dist/wAVdio-de",
-              "i18nFile": "src/i18n/messages.de.xlf",
-              "i18nLocale": "de"
+              "localize": ["de"]
             },
             "en": {
               "budgets": [
@@ -85,8 +84,7 @@
                 }
               ],
               "outputPath": "dist/wAVdio-en",
-              "i18nFile": "src/i18n/messages.en.xlf",
-              "i18nLocale": "en"
+              "localize": ["en"]
             },
             "es": {
               "budgets": [
@@ -96,8 +94,7 @@
                 }
               ],
               "outputPath": "dist/wAVdio-es",
-              "i18nFile": "src/i18n/messages.es.xlf",
-              "i18nLocale": "es"
+              "localize": ["es"]
             },
             "fr": {
               "budgets": [
@@ -107,13 +104,10 @@
                 }
               ],
               "outputPath": "dist/wAVdio-fr",
-              "i18nFile": "src/i18n/messages.fr.xlf",
-              "i18nLocale": "fr"
+              "localize": ["fr"]
             },
             "prod-de": {
               "outputPath": "dist/wAVdio-prod-de",
-              "i18nFile": "src/i18n/messages.de.xlf",
-              "i18nLocale": "de",
               "deployUrl": "/de/",
               "optimization": true,
               "outputHashing": "all",
@@ -142,8 +136,6 @@
             },
             "prod-en": {
               "outputPath": "dist/wAVdio-prod-en",
-              "i18nFile": "src/i18n/messages.en.xlf",
-              "i18nLocale": "en",
               "deployUrl": "/en/",
               "optimization": true,
               "outputHashing": "all",
@@ -172,8 +164,6 @@
             },
             "prod-es": {
               "outputPath": "dist/wAVdio-prod-es",
-              "i18nFile": "src/i18n/messages.es.xlf",
-              "i18nLocale": "es",
               "deployUrl": "/es/",
               "optimization": true,
               "outputHashing": "all",
@@ -202,8 +192,6 @@
             },
             "prod-fr": {
               "outputPath": "dist/wAVdio-prod-fr",
-              "i18nFile": "src/i18n/messages.fr.xlf",
-              "i18nLocale": "fr",
               "deployUrl": "/fr/",
               "optimization": true,
               "outputHashing": "all",
