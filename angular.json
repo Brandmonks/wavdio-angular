@@ -52,9 +52,9 @@
               "src/app-theme.scss"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery/dist/jquery.js",
               "node_modules/slick-carousel/slick/slick.min.js",
-              "node_modules/marked/lib/marked.js"
+              "node_modules/marked/lib/marked.umd.js"
             ],
             "serviceWorker": true,
             "ngswConfigPath": "ngsw-config.json",
