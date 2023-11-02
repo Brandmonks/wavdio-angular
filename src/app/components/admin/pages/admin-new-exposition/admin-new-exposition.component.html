@@ -13,7 +13,7 @@
 
   <!-- -->
 
-  <section *ngIf="exposition" class="content-left ml-3 mr-2">
+  <section *ngIf="exposition" class="content-left ms-3 me-2">
     <!-- Section Expositoin Forms-->
     <section class="mt-2">
       <div class="card">
@@ -24,7 +24,7 @@
                  [(ngModel)]="exposition.getContent(selectedLanguage).name" required="true">
 
           <div class="mb-2">
-            <label class="mr-2" for="active">Aktiv</label>
+            <label class="me-2" for="active">Aktiv</label>
             <input id="active" type="checkbox" [(ngModel)]="exposition.active">
           </div>
 
