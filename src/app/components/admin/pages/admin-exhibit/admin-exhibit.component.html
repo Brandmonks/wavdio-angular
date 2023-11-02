@@ -18,7 +18,7 @@
     <section class="mt-2">
       <div class="card">
         <div class="card-body">
-          <div class="form-row mb-2">
+          <div class="row mb-2">
             <div class="col-9">
               <label for="name">Titel</label>
               <input id="name" class="form-control" type="text"
@@ -40,7 +40,7 @@
                     [(ngModel)]="exhibit.getContent(selectedLanguage).info"></textarea>
           <label for="note">Notizen</label>
           <textarea id="note" notizen class="form-control mb-2" [(ngModel)]="exhibit.note" rows="7"></textarea>
-          <div class="form-row mb-2">
+          <div class="row mb-2">
             <div class="col-6">
               <button (click)="updateExhibit()" class="btn btn-success w-100" aria-label="Save exhibit">
                 Speichern
@@ -59,7 +59,7 @@
     <section class="mt-2">
       <div class="card">
         <div class="card-body">
-          <div class="form-row">
+          <div class="row">
             <div class="col-lg-6">
               <button [routerLink]="'/admin/statistics/exhibit/'+ exhibit._id" class="btn btn-primary w-100"
                       aria-label="Show exhibit statistics">
