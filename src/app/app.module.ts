@@ -24,7 +24,7 @@ import {LoggerModule, NgxLoggerLevel} from 'ngx-logger';
 import {MarkdownModule} from 'ngx-markdown';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
 import {NgxPrintModule} from 'ngx-print';
-import {NgxQRCodeModule} from '@techiediaries/ngx-qrcode';
+import { QRCodeModule } from 'angularx-qrcode';
 
 import {AdminAlertComponent} from './components/admin/parts/admin-alert/admin-alert.component';
 import {AdminBoxCardComponent} from './components/admin/parts/admin-box-card/admin-box-card.component';
@@ -191,7 +191,7 @@ const appRoutes: Routes = [
         NgbModule,
         NgxChartsModule,
         NgxPrintModule,
-        NgxQRCodeModule,
+        QRCodeModule,
         RouterModule.forRoot(appRoutes, {
     onSameUrlNavigation: 'reload',
     enableTracing: false

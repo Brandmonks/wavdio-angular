@@ -6,9 +6,11 @@
           <h1 class="card-title truncate"> {{ exhibit.getContent(lang).name }}</h1>
           <h2 class="card-subtitle">{{ exhibit.code }}</h2>
           <div>
-            <ngx-qrcode [elementType]="this.elementType"
-                        [value]="'http://' + host + ':'  + port + '/exhibit/' + exhibit._id">
-            </ngx-qrcode>
+            <qrcode 
+              [qrdata]="'http://' + host + ':'  + port + '/exhibit/' + exhibit._id" 
+              [width]="256" 
+              [errorCorrectionLevel]="'M'"
+            />
           </div>
         </section>
         <button class="btn btn-primary w-100"
