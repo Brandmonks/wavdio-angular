@@ -34,7 +34,7 @@
     "@fortawesome/angular-fontawesome": "^0.13.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@ng-bootstrap/ng-bootstrap": "^14.2.0",
+    "@ng-bootstrap/ng-bootstrap": "^15.1.2",
     "@ngx-i18nsupport/tooling": "^8.0.3",
     "@swimlane/ngx-charts": "^20.4.1",
     "@types/jquery": "^3.3.29",
