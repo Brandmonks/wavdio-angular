@@ -5,13 +5,10 @@
   "projects": {
     "wAVdio": {
       "i18n": {
+        "sourceLocale": "en",
         "locales": {
           "de": {
             "translation": "src/i18n/messages.de.xlf",
-            "baseHref": ""
-          },
-          "en": {
-            "translation": "src/i18n/messages.en.xlf",
             "baseHref": ""
           },
           "es": {
@@ -107,8 +104,8 @@
               "localize": ["fr"]
             },
             "prod-de": {
-              "outputPath": "dist/wAVdio-prod-de",
-              "deployUrl": "/de/",
+              "baseHref": "/de/",
+              "outputPath": "dist/wAVdio-de",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -132,11 +129,12 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb"
                 }
-              ]
+              ],
+              "localize": ["de"]
             },
             "prod-en": {
-              "outputPath": "dist/wAVdio-prod-en",
-              "deployUrl": "/en/",
+              "baseHref": "/",
+              "outputPath": "dist/wAVdio-en",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -160,11 +158,12 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb"
                 }
-              ]
+              ],
+              "localize": ["en"]
             },
             "prod-es": {
-              "outputPath": "dist/wAVdio-prod-es",
-              "deployUrl": "/es/",
+              "baseHref": "/es/",
+              "outputPath": "dist/wAVdio-es",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -188,11 +187,12 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb"
                 }
-              ]
+              ],
+              "localize": ["es"]
             },
             "prod-fr": {
-              "outputPath": "dist/wAVdio-prod-fr",
-              "deployUrl": "/fr/",
+              "baseHref": "/fr/",
+              "outputPath": "dist/wAVdio-fr",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -216,7 +216,8 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb"
                 }
-              ]
+              ],
+              "localize": ["fr"]
             }
           },
           "defaultConfiguration": ""
