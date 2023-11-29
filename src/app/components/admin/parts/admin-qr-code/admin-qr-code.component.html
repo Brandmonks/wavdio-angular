@@ -8,8 +8,9 @@
           <div>
             <qrcode 
               [qrdata]="'http://' + host + ':'  + port + '/exhibit/' + exhibit._id" 
-              [width]="'100%'" 
+              [width]="'min(100%, 200px)'" 
               [errorCorrectionLevel]="'M'"
+              [elementType]="'svg'"
             />
           </div>
         </section>
