@@ -36,7 +36,9 @@ export class UserExhibitFullscreenComponent implements OnInit {
 
       this.activatedRoute.queryParams.subscribe(queryParams => {
         let slide = null;
-        if (queryParams.slide) {
+
+        // According to Angular Update Docs, queryParams might be null or undefined
+        if (queryParams && queryParams.slide) {
           slide = Number(queryParams.slide);
         }
 

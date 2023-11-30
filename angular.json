@@ -4,6 +4,23 @@
   "newProjectRoot": "projects",
   "projects": {
     "wAVdio": {
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "de": {
+            "translation": "src/i18n/messages.de.xlf",
+            "baseHref": ""
+          },
+          "es": {
+            "translation": "src/i18n/messages.es.xlf",
+            "baseHref": ""
+          },
+          "fr": {
+            "translation": "src/i18n/messages.fr.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -32,54 +49,66 @@
               "src/app-theme.scss"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery/dist/jquery.js",
               "node_modules/slick-carousel/slick/slick.min.js",
-              "node_modules/marked/lib/marked.js"
+              "node_modules/marked/lib/marked.umd.js"
             ],
             "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            "ngswConfigPath": "ngsw-config.json",
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "de": {
-              "aot": true,
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "outputPath": "dist/wAVdio-de",
-              "i18nFile": "src/i18n/messages.de.xlf",
-              "i18nFormat": "xlf",
-              "i18nLocale": "de"
+              "localize": ["de"]
             },
             "en": {
-              "aot": true,
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "outputPath": "dist/wAVdio-en",
-              "i18nFile": "src/i18n/messages.en.xlf",
-              "i18nFormat": "xlf",
-              "i18nLocale": "en"
+              "localize": ["en"]
             },
             "es": {
-              "aot": true,
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "outputPath": "dist/wAVdio-es",
-              "i18nFile": "src/i18n/messages.es.xlf",
-              "i18nFormat": "xlf",
-              "i18nLocale": "es"
+              "localize": ["es"]
             },
             "fr": {
-              "aot": true,
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "outputPath": "dist/wAVdio-fr",
-              "i18nFile": "src/i18n/messages.fr.xlf",
-              "i18nFormat": "xlf",
-              "i18nLocale": "fr"
+              "localize": ["fr"]
             },
             "prod-de": {
-              "aot": true,
-              "outputPath": "dist/wAVdio-prod-de",
-              "i18nFile": "src/i18n/messages.de.xlf",
-              "i18nFormat": "xlf",
-              "i18nLocale": "de",
               "baseHref": "/de/",
-              "deployUrl": "/de/",
+              "outputPath": "dist/wAVdio-de",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -95,21 +124,20 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
-              ]
+              ],
+              "localize": ["de"]
             },
             "prod-en": {
-              "aot": true,
-              "outputPath": "dist/wAVdio-prod-en",
-              "i18nFile": "src/i18n/messages.en.xlf",
-              "i18nFormat": "xlf",
-              "i18nLocale": "en",
-              "baseHref": "/en/",
-              "deployUrl": "/en/",
+              "baseHref": "/",
+              "outputPath": "dist/wAVdio-en",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -125,21 +153,20 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
-              ]
+              ],
+              "localize": ["en"]
             },
             "prod-es": {
-              "aot": true,
-              "outputPath": "dist/wAVdio-prod-es",
-              "i18nFile": "src/i18n/messages.es.xlf",
-              "i18nFormat": "xlf",
-              "i18nLocale": "es",
               "baseHref": "/es/",
-              "deployUrl": "/es/",
+              "outputPath": "dist/wAVdio-es",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -155,21 +182,20 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
-              ]
+              ],
+              "localize": ["es"]
             },
             "prod-fr": {
-              "aot": true,
-              "outputPath": "dist/wAVdio-prod-fr",
-              "i18nFile": "src/i18n/messages.fr.xlf",
-              "i18nFormat": "xlf",
-              "i18nLocale": "fr",
               "baseHref": "/fr/",
-              "deployUrl": "/fr/",
+              "outputPath": "dist/wAVdio-fr",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -185,10 +211,16 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
-              ]
+              ],
+              "localize": ["fr"]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -244,18 +276,6 @@
             ]
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
         "xliffmerge": {
           "builder": "@ngx-i18nsupport/tooling:xliffmerge",
           "options": {
@@ -291,18 +311,8 @@
               "devServerTarget": "wAVdio:serve:production"
             }
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     }
-  },
-  "defaultProject": "wAVdio"
+  }
 }

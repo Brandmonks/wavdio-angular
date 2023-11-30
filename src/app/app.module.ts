@@ -1,24 +1,21 @@
 import {HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {
-  MatButtonModule,
-  MatListModule,
-  MatMenuModule,
-  MatSidenavModule,
-  MatTabsModule,
-  MatToolbarModule
-} from '@angular/material';
-import {MatCardModule} from '@angular/material/card';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+import { MatLegacyListModule as MatListModule } from '@angular/material/legacy-list';
+import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatLegacyCardModule as MatCardModule} from '@angular/material/legacy-card';
+import {MatLegacyCheckboxModule as MatCheckboxModule} from '@angular/material/legacy-checkbox';
 import {MatIconModule} from '@angular/material/icon';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule, Routes} from '@angular/router';
 import {ServiceWorkerModule} from '@angular/service-worker';
 
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import {library} from '@fortawesome/fontawesome-svg-core';
+import {FontAwesomeModule, FaIconLibrary} from '@fortawesome/angular-fontawesome';
 import {fas} from '@fortawesome/free-solid-svg-icons';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
@@ -27,7 +24,7 @@ import {LoggerModule, NgxLoggerLevel} from 'ngx-logger';
 import {MarkdownModule} from 'ngx-markdown';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
 import {NgxPrintModule} from 'ngx-print';
-import {NgxQRCodeModule} from 'ngx-qrcode2';
+import { QRCodeModule } from 'angularx-qrcode';
 
 import {AdminAlertComponent} from './components/admin/parts/admin-alert/admin-alert.component';
 import {AdminBoxCardComponent} from './components/admin/parts/admin-box-card/admin-box-card.component';
@@ -121,101 +118,95 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    AdminAlertComponent,
-    AdminBoxCardComponent,
-    AdminCommentCardComponent,
-    AdminComponent,
-    AdminExhibitComponent,
-    AdminExhibitStatsComponent,
-    AdminExhibitsExpositionsComponent,
-    AdminExpositionComponent,
-    AdminExpositionStatsComponent,
-    AdminHeaderComponent,
-    AdminImageDetailsComponent,
-    AdminInfoPageComponent,
-    AdminInfoPagesComponent,
-    AdminLoginComponent,
-    AdminMuseumComponent,
-    AdminNewExhibitComponent,
-    AdminNewExpositionComponent,
-    AdminNewInfoPageComponent,
-    AdminQrCodeComponent,
-    AdminSettingsComponent,
-    AdminSidebarComponent,
-    AdminSpinnerComponent,
-    AdminWelcomeComponent,
-    AppComponent,
-    CommonAudioPlayerComponent,
-    CommonCookieBannerComponent,
-    CommonErrorComponent,
-    CommonExhibitCardComponent,
-    CommonExpositionCardComponent,
-    CommonVideoPlayerComponent,
-    UserAppBarComponent,
-    UserCarouselComponent,
-    UserCommentComponent,
-    UserComponent,
-    UserExhibitComponent,
-    UserExhibitFullscreenComponent,
-    UserExpositionComponent,
-    UserExpositionFullscreenComponent,
-    UserImprintComponent,
-    UserInfoPageComponent,
-    UserMuseumComponent,
-    UserMuseumFullscreenComponent,
-    UserPrivacyPolicyComponent,
-    UserSitePlanComponent,
-    UserSitePlanFullscreenComponent,
-    UserUsageTermsComponent,
-    UserWelcomeComponent
-  ],
-  imports: [
-    BrowserAnimationsModule,
-    BrowserModule,
-    FontAwesomeModule,
-    FormsModule,
-    HttpClientModule,
-    LoggerModule.forRoot({
-      level: environment.production ? NgxLoggerLevel.OFF : NgxLoggerLevel.TRACE,
-      serverLogLevel: environment.production ? NgxLoggerLevel.OFF : NgxLoggerLevel.TRACE,
-      serverLoggingUrl: '/api/v2/logs'
-    }),
-    MarkdownModule.forRoot(),
-    MatButtonModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatIconModule,
-    MatListModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatTabsModule,
-    MatToolbarModule,
-    NgbModule,
-    NgxChartsModule,
-    NgxPrintModule,
-    NgxQRCodeModule,
-    RouterModule.forRoot(appRoutes, {
-      onSameUrlNavigation: 'reload',
-      enableTracing: false
-    }),
-    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
-    SlickCarouselModule
-  ],
-  exports: [
-    UserCommentComponent
-  ],
-  entryComponents: [
-    AdminImageDetailsComponent,
-    AdminQrCodeComponent,
-    AdminSpinnerComponent,
-    UserCommentComponent
-  ],
-  providers: [CookieService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AdminAlertComponent,
+        AdminBoxCardComponent,
+        AdminCommentCardComponent,
+        AdminComponent,
+        AdminExhibitComponent,
+        AdminExhibitStatsComponent,
+        AdminExhibitsExpositionsComponent,
+        AdminExpositionComponent,
+        AdminExpositionStatsComponent,
+        AdminHeaderComponent,
+        AdminImageDetailsComponent,
+        AdminInfoPageComponent,
+        AdminInfoPagesComponent,
+        AdminLoginComponent,
+        AdminMuseumComponent,
+        AdminNewExhibitComponent,
+        AdminNewExpositionComponent,
+        AdminNewInfoPageComponent,
+        AdminQrCodeComponent,
+        AdminSettingsComponent,
+        AdminSidebarComponent,
+        AdminSpinnerComponent,
+        AdminWelcomeComponent,
+        AppComponent,
+        CommonAudioPlayerComponent,
+        CommonCookieBannerComponent,
+        CommonErrorComponent,
+        CommonExhibitCardComponent,
+        CommonExpositionCardComponent,
+        CommonVideoPlayerComponent,
+        UserAppBarComponent,
+        UserCarouselComponent,
+        UserCommentComponent,
+        UserComponent,
+        UserExhibitComponent,
+        UserExhibitFullscreenComponent,
+        UserExpositionComponent,
+        UserExpositionFullscreenComponent,
+        UserImprintComponent,
+        UserInfoPageComponent,
+        UserMuseumComponent,
+        UserMuseumFullscreenComponent,
+        UserPrivacyPolicyComponent,
+        UserSitePlanComponent,
+        UserSitePlanFullscreenComponent,
+        UserUsageTermsComponent,
+        UserWelcomeComponent
+    ],
+    imports: [
+        BrowserAnimationsModule,
+        BrowserModule,
+        FontAwesomeModule,
+        FormsModule,
+        HttpClientModule,
+        LoggerModule.forRoot({
+            level: environment.production ? NgxLoggerLevel.OFF : NgxLoggerLevel.TRACE,
+            serverLogLevel: environment.production ? NgxLoggerLevel.OFF : NgxLoggerLevel.TRACE,
+            serverLoggingUrl: '/api/v2/logs'
+        }),
+        MarkdownModule.forRoot(),
+        MatButtonModule,
+        MatCardModule,
+        MatCheckboxModule,
+        MatIconModule,
+        MatListModule,
+        MatMenuModule,
+        MatSidenavModule,
+        MatTabsModule,
+        MatToolbarModule,
+        NgbModule,
+        NgxChartsModule,
+        NgxPrintModule,
+        QRCodeModule,
+        RouterModule.forRoot(appRoutes, {
+    onSameUrlNavigation: 'reload',
+    enableTracing: false
+}),
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+        SlickCarouselModule
+    ],
+    exports: [
+        UserCommentComponent
+    ],
+    providers: [CookieService],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor() {
-    library.add(fas);
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas);
   }
 }

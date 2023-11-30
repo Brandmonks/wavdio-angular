@@ -13,12 +13,12 @@
 
   <!-- -->
 
-  <section *ngIf="exhibit" class="content-left ml-3 mr-2">
+  <section *ngIf="exhibit" class="content-left ms-3 me-2">
     <!-- Section Expositoin Forms-->
     <section class="mt-2">
       <div class="card">
         <div class="card-body">
-          <div class="form-row mb-2">
+          <div class="row mb-2">
             <div class="col-9">
               <label for="name">Titel</label>
               <input id="name" class="form-control" type="text"
@@ -31,7 +31,7 @@
             </div>
           </div>
           <div class="mb-2">
-            <label class="mr-2" for="active">Aktiv</label>
+            <label class="me-2" for="active">Aktiv</label>
             <input id="active" type="checkbox" [(ngModel)]="exhibit.active">
           </div>
           <label for="info">Beschreibung</label>
@@ -39,7 +39,7 @@
                     [(ngModel)]="exhibit.getContent(selectedLanguage).info" ></textarea>
           <label for="note">Notizen</label>
           <textarea id="note" class="form-control mb-2" [(ngModel)]="exhibit.note" rows="7"></textarea>
-          <div class="form-row mb-2">
+          <div class="row mb-2">
             <div class="col-12">
               <button (click)="createExhibit()" class="btn btn-success w-100" aria-label="Create exhibit">
                 Anlegen
